@@ -15,7 +15,7 @@ public class DepositController {
     @Autowired
     private DepositService depositService;
     @PostMapping
-    public Deposit createDeposit(@RequestBody DepositDTO depositDTO) {
+    public Deposit createDeposit(@Valid @RequestBody DepositDTO depositDTO) {
         return depositService.createDeposit(depositDTO);
     }
 }
