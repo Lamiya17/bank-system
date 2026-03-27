@@ -12,7 +12,7 @@ public class CreditController {
     @Autowired
     private CreditService creditService;
     @PostMapping
-    public Credit createCredit(@RequestBody CreditDTO creditDTO) {
+    public Credit createCredit(@Valid @RequestBody CreditDTO creditDTO) {
         return creditService.createCredit(creditDTO);
     }
     @PostMapping("/pay")
